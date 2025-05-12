@@ -131,3 +131,5 @@ dmypy.json
 
 # user defined
 logs/
+
+data/
