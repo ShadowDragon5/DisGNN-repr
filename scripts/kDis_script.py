@@ -1,11 +1,11 @@
+import csv
 import os
 import sys
+import time
+from argparse import ArgumentParser
 
 os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(".")
-
-import time
-from argparse import ArgumentParser
 
 import pytorch_lightning as pl
 from datasets.MD17 import md17_datawork
@@ -192,3 +192,9 @@ test_loss = test(
     only_test=only_test,
     ckpt_path=checkpoint_path,
 )
+
+with open("results.csv", "a") as out:
+    out = csv.writer(out)
+    out.writerow([data_name])
+    for loss in test_loss:
+        out.writerows(loss.items())
