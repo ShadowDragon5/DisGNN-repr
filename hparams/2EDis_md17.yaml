@@ -26,7 +26,7 @@ optimizer_config:
     gradient_clip_val: 10
     ema_decay: 0.99
     weight_decay: 0.0
-    
+
 # model_config
 model_config:
     rbf: nexpnorm
@@ -39,8 +39,3 @@ model_config:
     block_num: 5
     use_concat: false
     e_mode: E  # E, e, null
-
-
-
-
-
