@@ -47,13 +47,14 @@ def trainer_setup(
 
     else:
         logger = TensorBoardLogger("logs", name=log_path, version=version)
+    assert data_name is not None
 
     # callback functions
     monitor = "val_loss/val_loss"
 
     earlystopping = EarlyStopping(monitor=monitor, patience=early_stopping_patience)
     modelcheckpoint = ModelCheckpoint(
-        monitor=monitor, filename="{epoch}-{step}-{val_loss}"
+        monitor=monitor, filename=data_name.replace(" ", "-") + "{epoch}"
     )
 
     # ddp strategy: if device number > 1, then start ddp
