@@ -9,7 +9,7 @@ class Dense(torch.nn.Module):
         in_features: int,
         out_features: int,
         bias: bool = True,
-        activation_fn: torch.nn.Module | None = None,
+        activation_fn=None,
         use_layer_norm=False,
     ):
         super().__init__()
@@ -47,7 +47,7 @@ class Residual(nn.Module):
         self,
         mlp_num: int,
         hidden_dim: int,
-        activation_fn: torch.nn.Module | None = None,
+        activation_fn=None,
         bias: bool = True,
         add_end_activation: bool = True,
         use_layer_norm=False,

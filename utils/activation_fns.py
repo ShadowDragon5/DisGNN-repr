@@ -1,7 +1,7 @@
-
-import torch.nn as nn
-import torch
 from functools import partial
+
+import torch
+import torch.nn as nn
 from torch.nn import functional as F
 
 
@@ -12,8 +12,8 @@ class ShiftedSoftplus(nn.Module):
 
     def forward(self, x):
         return F.softplus(x) - self.shift
-    
-    
+
+
 class ScaledSiLU(torch.nn.Module):
     def __init__(self, inplace=False):
         super().__init__()
@@ -23,6 +23,7 @@ class ScaledSiLU(torch.nn.Module):
     def forward(self, x):
         return self._activation(x) * self.scale_factor
 
+
 activation_fn_map = {
     "ssp": ShiftedSoftplus(),
     "silu": nn.SiLU(False),
@@ -31,8 +32,5 @@ activation_fn_map = {
     "sigmoid": torch.sigmoid,
     "selu": partial(nn.SELU, inplace=False),
     "identity": nn.Identity,
-    "ssilu": ScaledSiLU(False)
+    "ssilu": ScaledSiLU(False),
 }
-
-
-

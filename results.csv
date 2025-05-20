@@ -1,0 +1,18 @@
+revised azobenzene
+test_loss/test_loss_e,0.03577485308051109
+test_loss/test_loss_f,0.11805517971515656
+revised benzene
+test_loss/test_loss_e,0.3769210875034332
+test_loss/test_loss_f,0.32936933636665344
+revised malonaldehyde
+test_loss/test_loss_e,0.012586016207933426
+test_loss/test_loss_f,0.0792367160320282
+revised salicylic acid
+test_loss/test_loss_e,0.018116477876901627
+test_loss/test_loss_f,0.08626057207584381
+revised toluene
+test_loss/test_loss_e,0.011276988312602043
+test_loss/test_loss_f,0.029661105945706367
+revised uracil
+test_loss/test_loss_e,0.013432922773063183
+test_loss/test_loss_f,0.08777216821908951

@@ -40,6 +40,3 @@ model_config:
     use_mult_lin: False
     activation_fn_name: silu
     interaction_residual: false
-
-
-

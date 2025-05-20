@@ -38,6 +38,8 @@ model_config:
     ef_dim: 16
     # k_tuple_dim: 320
     k_tuple_dim: 512
+    use_mult_lin: False
     pooling_level: middle # low middle high
     e_mode: E # E, e, null
+    activation_fn_name: silu
     block_num: 4

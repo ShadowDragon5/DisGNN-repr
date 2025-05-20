@@ -24,15 +24,6 @@
         devShell = pkgs.mkShell {
           buildInputs = [
             myPython
-            # myPython.pkgs.pip
-            # myPython.pkgs.virtualenv
-            # python38
-            # python38Packages.pip
-            # python38Packages.virtualenv
-            # pythonManylinuxPackages.manylinux2014Package
-            # cmake
-            # ninja
-            # imagemagick
           ];
           shellHook = ''
             export LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib.outPath}/lib:${pkgs.pythonManylinuxPackages.manylinux2014Package}/lib:$LD_LIBRARY_PATH";
